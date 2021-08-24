@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3532B075-A718-4639-8665-E00F293DF9E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TheNeo_POS_System</RootNamespace>
+    <AssemblyName>TheNeo_POS_System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_Small_Business.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="About_Page.Designer.cs">
+      <DependentUpon>About_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Category_Page.Designer.cs">
+      <DependentUpon>Category_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashBoard_Page.Designer.cs">
+      <DependentUpon>DashBoard_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="GRN_New_Item_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GRN_New_Item_Page.Designer.cs">
+      <DependentUpon>GRN_New_Item_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Invoice_Page.Designer.cs">
+      <DependentUpon>Invoice_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Page.Designer.cs">
+      <DependentUpon>Login_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MassegeForTeamInfor_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MassegeForTeamInfor_Page.Designer.cs">
+      <DependentUpon>MassegeForTeamInfor_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price_Update_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Price_Update_Page.Designer.cs">
+      <DependentUpon>Price_Update_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quick_Item_Wizard_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quick_Item_Wizard_Page.Designer.cs">
+      <DependentUpon>Quick_Item_Wizard_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service_Page.Designer.cs">
+      <DependentUpon>Service_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setting_Page.Designer.cs">
+      <DependentUpon>Setting_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Store_Page.Designer.cs">
+      <DependentUpon>Store_Page.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About_Page.resx">
+      <DependentUpon>About_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category_Page.resx">
+      <DependentUpon>Category_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard_Page.resx">
+      <DependentUpon>DashBoard_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GRN_New_Item_Page.resx">
+      <DependentUpon>GRN_New_Item_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice_Page.resx">
+      <DependentUpon>Invoice_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Page.resx">
+      <DependentUpon>Login_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MassegeForTeamInfor_Page.resx">
+      <DependentUpon>MassegeForTeamInfor_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price_Update_Page.resx">
+      <DependentUpon>Price_Update_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Quick_Item_Wizard_Page.resx">
+      <DependentUpon>Quick_Item_Wizard_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service_Page.resx">
+      <DependentUpon>Service_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Page.resx">
+      <DependentUpon>Setting_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store_Page.resx">
+      <DependentUpon>Store_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male User_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize Window_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Online Support_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Online Support_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database Backup_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invoice_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Service_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Online Store_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expensive Price _25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graph Report_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shop_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shop_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Today_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sale_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sale_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sale_55px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Today_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Today_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product_70px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Total Sales_70px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Historical_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shop_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invoice_W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Service_W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Online Store_W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expensive Price _W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graph Report_W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services_W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Backup_W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkout_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Broom_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_W25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Access Denied_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_Small_Business.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
