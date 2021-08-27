@@ -121,6 +121,9 @@
   <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Clock_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Clock_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Total Sales_70px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Total Sales_70px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,14 +139,11 @@
   <data name="Calculator_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calculator_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Invoice_W25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Invoice_W25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Access Denied_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Access Denied_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Broom_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Broom_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Expensive Price _25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Expensive Price _25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="New_W25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\New_W25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,14 +190,17 @@
   <data name="Services_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Services_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Minimize Window_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minimize Window_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Online Store_W25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Online Store_W25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dashboard_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Male User_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Male User_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Search_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Online Support_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Online Support_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,11 +241,11 @@
   <data name="Add_W25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add_W25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Access Denied_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Access Denied_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Expensive Price _25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Expensive Price _25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Clock_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Clock_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Male User_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Male User_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Help_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Help_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +256,8 @@
   <data name="Print_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Print_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Minimize Window_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minimize Window_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Invoice_W25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Invoice_W25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Expensive Price _W25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Expensive Price _W25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,7 +274,7 @@
   <data name="Sale_55px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sale_55px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Delete_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

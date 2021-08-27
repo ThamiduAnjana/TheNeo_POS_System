@@ -350,6 +350,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_Small_Business.ico" />
+    <None Include="Resources\Delete_25px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
