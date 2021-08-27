@@ -40,7 +40,6 @@ namespace TheNeo_POS_System
                     }
 
                     ClearInputData();
-                    GetLastCategoryID();
                     CategoryDataGridViewDisplay();
                 }
                 catch (Exception ex)
@@ -121,6 +120,51 @@ namespace TheNeo_POS_System
         private void btn_Clear_Click(object sender, EventArgs e)
         {
             ClearInputData();
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            string categoryid = txt_CategoryID.Text;
+            string categoryname = txt_CategoryName.Text;
+            string categorydescription = txt_CategoryDescription.Text;
+
+            if (!categoryid.Equals("") && !categoryname.Equals("") || !categorydescription.Equals(""))
+            {
+                try
+                {
+                    string SQLQuery = "UPDATE [POSSTheNeoMobile].[dbo].[TB.Category] SET C_Name = '" + categoryname + "',C_Description = '" + categorydescription + "' WHERE C_ID = '" + categoryid + "';";
+                    dBConnection.ExecuteQueries(SQLQuery);
+
+                    const string message = "Update Successfull..!";
+                    const string caption = "Data Update Information..";
+                    var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // If the no button was pressed ...
+                    if (result == DialogResult.OK)
+                    {
+
+                    }
+
+                    ClearInputData();
+                    CategoryDataGridViewDisplay();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                const string message = "Update Fail..! Please check your data..";
+                const string caption = "Data Update Information..";
+                var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // If the no button was pressed ...
+                if (result == DialogResult.OK)
+                {
+
+                }
+            }
         }
     }
 }
