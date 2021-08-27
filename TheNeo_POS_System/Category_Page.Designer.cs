@@ -46,7 +46,7 @@ namespace TheNeo_POS_System
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_Category = new System.Windows.Forms.DataGridView();
-            this.txt_CategoryIDSearch = new System.Windows.Forms.TextBox();
+            this.txt_CategoryNameSearch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.C_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -184,7 +184,7 @@ namespace TheNeo_POS_System
             this.panel3.BackColor = System.Drawing.SystemColors.Window;
             this.panel3.Controls.Add(this.dgv_Category);
             this.panel3.Controls.Add(this.btn_Search);
-            this.panel3.Controls.Add(this.txt_CategoryIDSearch);
+            this.panel3.Controls.Add(this.txt_CategoryNameSearch);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(29, 52);
             this.panel3.Name = "panel3";
@@ -241,13 +241,14 @@ namespace TheNeo_POS_System
             this.dgv_Category.TabIndex = 32;
             this.dgv_Category.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Category_CellClick);
             // 
-            // txt_CategoryIDSearch
+            // txt_CategoryNameSearch
             // 
-            this.txt_CategoryIDSearch.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txt_CategoryIDSearch.Location = new System.Drawing.Point(23, 46);
-            this.txt_CategoryIDSearch.Name = "txt_CategoryIDSearch";
-            this.txt_CategoryIDSearch.Size = new System.Drawing.Size(562, 27);
-            this.txt_CategoryIDSearch.TabIndex = 13;
+            this.txt_CategoryNameSearch.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_CategoryNameSearch.Location = new System.Drawing.Point(23, 46);
+            this.txt_CategoryNameSearch.Name = "txt_CategoryNameSearch";
+            this.txt_CategoryNameSearch.Size = new System.Drawing.Size(562, 27);
+            this.txt_CategoryNameSearch.TabIndex = 13;
+            this.txt_CategoryNameSearch.TextChanged += new System.EventHandler(this.txt_CategoryNameSearch_TextChanged);
             // 
             // label4
             // 
@@ -255,9 +256,9 @@ namespace TheNeo_POS_System
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label4.Location = new System.Drawing.Point(19, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 21);
+            this.label4.Size = new System.Drawing.Size(178, 21);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Item Category ID";
+            this.label4.Text = "Item Category Name";
             // 
             // C_ID
             // 
@@ -298,6 +299,7 @@ namespace TheNeo_POS_System
             this.btn_Search.Text = "     Search";
             this.btn_Search.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_Clear
             // 
@@ -357,6 +359,7 @@ namespace TheNeo_POS_System
             this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Update
             // 
@@ -419,7 +422,7 @@ namespace TheNeo_POS_System
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.TextBox txt_CategoryIDSearch;
+        private System.Windows.Forms.TextBox txt_CategoryNameSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgv_Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_ID;

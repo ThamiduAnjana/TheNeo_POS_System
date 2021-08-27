@@ -40,7 +40,6 @@ namespace TheNeo_POS_System
                     }
 
                     ClearInputData();
-                    CategoryDataGridViewDisplay();
                 }
                 catch (Exception ex)
                 {
@@ -64,6 +63,7 @@ namespace TheNeo_POS_System
         private void ClearInputData()
         {
             GetLastCategoryID();
+            CategoryDataGridViewDisplay();
             txt_CategoryName.Text = "";
             txt_CategoryDescription.Text = "";
         }
@@ -146,7 +146,6 @@ namespace TheNeo_POS_System
                     }
 
                     ClearInputData();
-                    CategoryDataGridViewDisplay();
                 }
                 catch (Exception ex)
                 {
@@ -164,6 +163,75 @@ namespace TheNeo_POS_System
                 {
 
                 }
+            }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            string categoryid = txt_CategoryID.Text;
+            string categoryname = txt_CategoryName.Text;
+            string categorydescription = txt_CategoryDescription.Text;
+
+            if (!categoryid.Equals("") && !categoryname.Equals("") || !categorydescription.Equals(""))
+            {
+                try
+                {
+                    string SQLQuery = "DELETE FROM [POSSTheNeoMobile].[dbo].[TB.Category] WHERE C_ID = '" + categoryid + "';";
+                    dBConnection.ExecuteQueries(SQLQuery);
+
+                    const string message = "Delete Successfull..!";
+                    const string caption = "Data Delete Information..";
+                    var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // If the no button was pressed ...
+                    if (result == DialogResult.OK)
+                    {
+
+                    }
+
+                    ClearInputData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                const string message = "Delete Fail..! Please check 'Category ID..'";
+                const string caption = "Data Delete Information..";
+                var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // If the no button was pressed ...
+                if (result == DialogResult.OK)
+                {
+
+                }
+            }
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            SearchCategory();
+        }
+
+        private void txt_CategoryNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchCategory();
+        }
+
+        private void SearchCategory()
+        {
+            string SearchCategoryName = txt_CategoryNameSearch.Text;
+            try
+            {
+                string SQLQuery = "SELECT * FROM [POSSTheNeoMobile].[dbo].[TB.Category] WHERE C_Name LIKE '" + SearchCategoryName + "%'";
+                dgv_Category.AutoGenerateColumns = false;
+                dgv_Category.DataSource = dBConnection.ShowDataInGridView(SQLQuery);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
