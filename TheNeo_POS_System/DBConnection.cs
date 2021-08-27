@@ -71,6 +71,11 @@ namespace TheNeo_POS_System
             return dr;
         }
 
+        public void CloseDataReader()
+        {
+            dr.Close();
+        }
+
 
         public object ShowDataInGridView(string Query_)
         {
