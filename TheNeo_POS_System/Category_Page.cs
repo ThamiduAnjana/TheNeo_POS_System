@@ -22,7 +22,10 @@ namespace TheNeo_POS_System
             {
                 try
                 {
-
+                    string SQLQuery = "INSERT INTO [POSSTheNeoMobile].[dbo].[TB.Category] (C_ID,C_Name,C_Description) VALUES ('"+ categoryid + "','"+ categoryname + "','"+ categorydescription + "');";
+                    dBConnection.ExecuteQueries(SQLQuery);
+                    dBConnection.CloseConnection();
+                    ClearInputData();
                 }
                 catch (Exception ex)
                 {
@@ -31,8 +34,23 @@ namespace TheNeo_POS_System
             }
             else
             {
+                const string message = "Insert Fail..! Please enter the data..";
+                const string caption = "Data Insert Information..";
+                var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                // If the no button was pressed ...
+                if (result == DialogResult.OK)
+                {
+
+                }
             }
+        }
+
+        private void ClearInputData()
+        {
+            txt_CategoryID.Text = "";
+            txt_CategoryName.Text = "";
+            txt_CategoryDescription.Text = "";
         }
     }
 }
