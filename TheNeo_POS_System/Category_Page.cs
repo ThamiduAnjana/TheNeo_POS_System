@@ -15,6 +15,7 @@ namespace TheNeo_POS_System
 
         private void btn_Insert_Click(object sender, EventArgs e)
         {
+            dBConnection.CloseDataReader();
             string categoryid = txt_CategoryID.Text;
             string categoryname = txt_CategoryName.Text;
             string categorydescription = txt_CategoryDescription.Text;
@@ -25,7 +26,19 @@ namespace TheNeo_POS_System
                 {
                     string SQLQuery = "INSERT INTO [POSSTheNeoMobile].[dbo].[TB.Category] (C_ID,C_Name,C_Description) VALUES ('"+ categoryid + "','"+ categoryname + "','"+ categorydescription + "');";
                     dBConnection.ExecuteQueries(SQLQuery);
+
+                    const string message = "Insert Successfull..!";
+                    const string caption = "Data Insert Information..";
+                    var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // If the no button was pressed ...
+                    if (result == DialogResult.OK)
+                    {
+
+                    }
+
                     ClearInputData();
+                    GetLastCategoryID();
                 }
                 catch (Exception ex)
                 {
@@ -48,7 +61,6 @@ namespace TheNeo_POS_System
 
         private void ClearInputData()
         {
-            txt_CategoryID.Text = "";
             txt_CategoryName.Text = "";
             txt_CategoryDescription.Text = "";
         }
@@ -60,11 +72,18 @@ namespace TheNeo_POS_System
                 string SQLQuery = "SELECT * FROM [POSSTheNeoMobile].[dbo].[TB.Category] ORDER BY C_ID DESC";
                 if (dBConnection.DataReader(SQLQuery).Read())
                 {
-                    txt_CategoryID.Text = dBConnection.dr["C_ID"].ToString();
+                    string ID = dBConnection.dr["C_ID"].ToString();
+                    char[] seperator = {'_' };
+                    string[] strarr = null;
+                    strarr = ID.Split(seperator);
+
+                    int index = int.Parse(strarr[1]);
+                    int val = index + 1;
+                    txt_CategoryID.Text = ("C_" + val.ToString());
                 }
                 else
                 {
-                    
+                    txt_CategoryID.Text = "C_1"; 
                 }
             }
             catch (Exception ex)
