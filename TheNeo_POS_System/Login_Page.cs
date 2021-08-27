@@ -14,11 +14,10 @@ namespace TheNeo_POS_System
 {
     public partial class Login_Page : Form
     {
+        DBConnection dBConnection = new DBConnection();
         public Login_Page()
         {
             InitializeComponent();
-
-            DBConnection dBConnection = new DBConnection();
             dBConnection.OpenConection();
         }
 
@@ -47,8 +46,8 @@ namespace TheNeo_POS_System
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            DBConnection dBConnection = new DBConnection();
-            dBConnection.OpenConection();
+            //DBConnection dBConnection = new DBConnection();
+            //dBConnection.OpenConection();
 
             string username = txt_username.Text;
             string password = txt_password.Text;
