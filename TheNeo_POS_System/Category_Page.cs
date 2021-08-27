@@ -6,16 +6,18 @@ namespace TheNeo_POS_System
     public partial class Category_Page : UserControl
     {
         DBConnection dBConnection = new DBConnection();
+
         public Category_Page()
         {
             InitializeComponent();
             dBConnection.OpenConection();
             GetLastCategoryID();
+            CategoryDataGridViewDisplay();
         }
 
         private void btn_Insert_Click(object sender, EventArgs e)
         {
-            dBConnection.CloseDataReader();
+            //dBConnection.CloseDataReader();
             string categoryid = txt_CategoryID.Text;
             string categoryname = txt_CategoryName.Text;
             string categorydescription = txt_CategoryDescription.Text;
@@ -39,6 +41,7 @@ namespace TheNeo_POS_System
 
                     ClearInputData();
                     GetLastCategoryID();
+                    CategoryDataGridViewDisplay();
                 }
                 catch (Exception ex)
                 {
@@ -61,6 +64,7 @@ namespace TheNeo_POS_System
 
         private void ClearInputData()
         {
+            GetLastCategoryID();
             txt_CategoryName.Text = "";
             txt_CategoryDescription.Text = "";
         }
@@ -80,6 +84,7 @@ namespace TheNeo_POS_System
                     int index = int.Parse(strarr[1]);
                     int val = index + 1;
                     txt_CategoryID.Text = ("C_" + val.ToString());
+                    dBConnection.CloseDataReader();
                 }
                 else
                 {
@@ -90,6 +95,32 @@ namespace TheNeo_POS_System
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void CategoryDataGridViewDisplay()
+        {
+            try
+            {
+                string SQLQuery = "SELECT * FROM [POSSTheNeoMobile].[dbo].[TB.Category]";
+                dgv_Category.AutoGenerateColumns = false;
+                dgv_Category.DataSource = dBConnection.ShowDataInGridView(SQLQuery);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgv_Category_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_CategoryID.Text = dgv_Category.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txt_CategoryName.Text = dgv_Category.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_CategoryDescription.Text = dgv_Category.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+            ClearInputData();
         }
     }
 }

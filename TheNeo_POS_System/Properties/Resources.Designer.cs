@@ -193,6 +193,16 @@ namespace TheNeo_POS_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Delete_25px {
+            get {
+                object obj = ResourceManager.GetObject("Delete_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Expensive_Price__25px {
             get {
                 object obj = ResourceManager.GetObject("Expensive Price _25px", resourceCulture);

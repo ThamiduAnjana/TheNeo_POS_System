@@ -29,17 +29,14 @@ namespace TheNeo_POS_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_Insert = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
-            this.btn_Update = new System.Windows.Forms.Button();
             this.txt_CategoryDescription = new System.Windows.Forms.TextBox();
             this.txt_CategoryName = new System.Windows.Forms.TextBox();
             this.txt_CategoryID = new System.Windows.Forms.TextBox();
@@ -49,12 +46,16 @@ namespace TheNeo_POS_System
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_Category = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_Search = new System.Windows.Forms.Button();
             this.txt_CategoryIDSearch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.C_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.btn_Clear = new System.Windows.Forms.Button();
+            this.btn_Insert = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Category)).BeginInit();
@@ -89,6 +90,7 @@ namespace TheNeo_POS_System
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Window;
+            this.panel4.Controls.Add(this.btn_Clear);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.btn_Insert);
             this.panel4.Controls.Add(this.btn_Delete);
@@ -113,64 +115,6 @@ namespace TheNeo_POS_System
             this.label8.Size = new System.Drawing.Size(290, 19);
             this.label8.TabIndex = 31;
             this.label8.Text = "Add New, Update, Delete Item Category";
-            // 
-            // btn_Insert
-            // 
-            this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(254)))));
-            this.btn_Insert.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
-            this.btn_Insert.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
-            this.btn_Insert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(121)))), ((int)(((byte)(255)))));
-            this.btn_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Insert.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btn_Insert.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_Insert.Image = global::TheNeo_POS_System.Properties.Resources.Add_W25px;
-            this.btn_Insert.Location = new System.Drawing.Point(433, 591);
-            this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(166, 93);
-            this.btn_Insert.TabIndex = 30;
-            this.btn_Insert.Text = "Insert";
-            this.btn_Insert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Insert.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_Insert.UseVisualStyleBackColor = false;
-            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(30)))), ((int)(((byte)(99)))));
-            this.btn_Delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(98)))), ((int)(((byte)(146)))));
-            this.btn_Delete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(24)))), ((int)(((byte)(91)))));
-            this.btn_Delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(64)))), ((int)(((byte)(122)))));
-            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Delete.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btn_Delete.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_Delete.Image = global::TheNeo_POS_System.Properties.Resources.Broom_25px;
-            this.btn_Delete.Location = new System.Drawing.Point(51, 591);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(166, 93);
-            this.btn_Delete.TabIndex = 29;
-            this.btn_Delete.Text = "Delete";
-            this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_Delete.UseVisualStyleBackColor = false;
-            // 
-            // btn_Update
-            // 
-            this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(254)))));
-            this.btn_Update.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
-            this.btn_Update.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
-            this.btn_Update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(121)))), ((int)(((byte)(255)))));
-            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Update.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btn_Update.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_Update.Image = global::TheNeo_POS_System.Properties.Resources.Update_25px;
-            this.btn_Update.Location = new System.Drawing.Point(241, 591);
-            this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(166, 93);
-            this.btn_Update.TabIndex = 28;
-            this.btn_Update.Text = "Update";
-            this.btn_Update.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_Update.UseVisualStyleBackColor = false;
             // 
             // txt_CategoryDescription
             // 
@@ -253,62 +197,88 @@ namespace TheNeo_POS_System
             this.dgv_Category.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Category.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgv_Category.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("LissenItal", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("LissenItal", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Category.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Category.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Category.DefaultCellStyle = dataGridViewCellStyle5;
+            this.C_ID,
+            this.C_Name,
+            this.C_Description});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Category.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Category.EnableHeadersVisualStyles = false;
             this.dgv_Category.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dgv_Category.Location = new System.Drawing.Point(7, 99);
+            this.dgv_Category.Location = new System.Drawing.Point(13, 99);
             this.dgv_Category.Name = "dgv_Category";
             this.dgv_Category.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Category.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Category.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Category.RowHeadersVisible = false;
+            this.dgv_Category.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dgv_Category.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.dgv_Category.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Category.RowTemplate.Height = 30;
             this.dgv_Category.Size = new System.Drawing.Size(731, 703);
             this.dgv_Category.TabIndex = 32;
+            this.dgv_Category.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Category_CellClick);
             // 
-            // Column1
+            // txt_CategoryIDSearch
             // 
-            this.Column1.HeaderText = "Category ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 120;
+            this.txt_CategoryIDSearch.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_CategoryIDSearch.Location = new System.Drawing.Point(23, 46);
+            this.txt_CategoryIDSearch.Name = "txt_CategoryIDSearch";
+            this.txt_CategoryIDSearch.Size = new System.Drawing.Size(562, 27);
+            this.txt_CategoryIDSearch.TabIndex = 13;
             // 
-            // Column2
+            // label4
             // 
-            this.Column2.HeaderText = "Category Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label4.Location = new System.Drawing.Point(19, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 21);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Item Category ID";
             // 
-            // Column3
+            // C_ID
             // 
-            this.Column3.HeaderText = "Description";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 450;
+            this.C_ID.DataPropertyName = "C_ID";
+            this.C_ID.HeaderText = "Category ID";
+            this.C_ID.Name = "C_ID";
+            this.C_ID.Width = 150;
+            // 
+            // C_Name
+            // 
+            this.C_Name.DataPropertyName = "C_Name";
+            this.C_Name.HeaderText = "Category Name";
+            this.C_Name.Name = "C_Name";
+            this.C_Name.Width = 220;
+            // 
+            // C_Description
+            // 
+            this.C_Description.DataPropertyName = "C_Description";
+            this.C_Description.HeaderText = "Description";
+            this.C_Description.Name = "C_Description";
+            this.C_Description.Width = 350;
             // 
             // btn_Search
             // 
@@ -329,23 +299,83 @@ namespace TheNeo_POS_System
             this.btn_Search.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Search.UseVisualStyleBackColor = false;
             // 
-            // txt_CategoryIDSearch
+            // btn_Clear
             // 
-            this.txt_CategoryIDSearch.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txt_CategoryIDSearch.Location = new System.Drawing.Point(23, 46);
-            this.txt_CategoryIDSearch.Name = "txt_CategoryIDSearch";
-            this.txt_CategoryIDSearch.Size = new System.Drawing.Size(562, 27);
-            this.txt_CategoryIDSearch.TabIndex = 13;
+            this.btn_Clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(30)))), ((int)(((byte)(99)))));
+            this.btn_Clear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(98)))), ((int)(((byte)(146)))));
+            this.btn_Clear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(24)))), ((int)(((byte)(91)))));
+            this.btn_Clear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(64)))), ((int)(((byte)(122)))));
+            this.btn_Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Clear.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btn_Clear.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_Clear.Image = global::TheNeo_POS_System.Properties.Resources.Broom_25px;
+            this.btn_Clear.Location = new System.Drawing.Point(102, 548);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(166, 93);
+            this.btn_Clear.TabIndex = 32;
+            this.btn_Clear.Text = "Clear";
+            this.btn_Clear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_Clear.UseVisualStyleBackColor = false;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
-            // label4
+            // btn_Insert
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label4.Location = new System.Drawing.Point(19, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 21);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Item Category ID";
+            this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(254)))));
+            this.btn_Insert.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.btn_Insert.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
+            this.btn_Insert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(121)))), ((int)(((byte)(255)))));
+            this.btn_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Insert.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btn_Insert.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_Insert.Image = global::TheNeo_POS_System.Properties.Resources.Add_W25px;
+            this.btn_Insert.Location = new System.Drawing.Point(369, 548);
+            this.btn_Insert.Name = "btn_Insert";
+            this.btn_Insert.Size = new System.Drawing.Size(166, 93);
+            this.btn_Insert.TabIndex = 30;
+            this.btn_Insert.Text = "Insert";
+            this.btn_Insert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Insert.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_Insert.UseVisualStyleBackColor = false;
+            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(30)))), ((int)(((byte)(99)))));
+            this.btn_Delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(98)))), ((int)(((byte)(146)))));
+            this.btn_Delete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(24)))), ((int)(((byte)(91)))));
+            this.btn_Delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(64)))), ((int)(((byte)(122)))));
+            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Delete.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btn_Delete.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_Delete.Image = global::TheNeo_POS_System.Properties.Resources.Delete_25px;
+            this.btn_Delete.Location = new System.Drawing.Point(102, 666);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(166, 93);
+            this.btn_Delete.TabIndex = 29;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(180)))), ((int)(((byte)(99)))));
+            this.btn_Update.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.btn_Update.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
+            this.btn_Update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(121)))), ((int)(((byte)(255)))));
+            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Update.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btn_Update.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_Update.Image = global::TheNeo_POS_System.Properties.Resources.Update_25px;
+            this.btn_Update.Location = new System.Drawing.Point(369, 666);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(166, 93);
+            this.btn_Update.TabIndex = 28;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_Update.UseVisualStyleBackColor = false;
             // 
             // Category_Page
             // 
@@ -391,8 +421,9 @@ namespace TheNeo_POS_System
         private System.Windows.Forms.TextBox txt_CategoryIDSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgv_Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_Description;
+        private System.Windows.Forms.Button btn_Clear;
     }
 }
