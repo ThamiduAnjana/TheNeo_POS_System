@@ -6,49 +6,64 @@ namespace TheNeo_POS_System
     public partial class Category_Page : UserControl
     {
         DBConnection dBConnection = new DBConnection();
-
+        string LastCategoryID;
         public Category_Page()
         {
             InitializeComponent();
             dBConnection.OpenConection();
-            GetLastCategoryID();
+            GetLastCategoryIDAndCal();
             CategoryDataGridViewDisplay();
         }
 
         private void btn_Insert_Click(object sender, EventArgs e)
         {
-            //dBConnection.CloseDataReader();
             string categoryid = txt_CategoryID.Text;
             string categoryname = txt_CategoryName.Text;
             string categorydescription = txt_CategoryDescription.Text;
 
             if (!categoryid.Equals("") && !categoryname.Equals("") || !categorydescription.Equals(""))
             {
-                try
+                if (!categoryid.Equals(CheckCategoryID(categoryid)))
                 {
-                    string SQLQuery = "INSERT INTO [POSSTheNeoMobile].[dbo].[TB.Category] (C_ID,C_Name,C_Description) VALUES ('"+ categoryid + "','"+ categoryname + "','"+ categorydescription + "');";
-                    dBConnection.ExecuteQueries(SQLQuery);
+                    dBConnection.CloseDataReader();
+                    try
+                    {
+                        string SQLQuery = "INSERT INTO [POSSTheNeoMobile].[dbo].[TB.Category] (C_ID,C_Name,C_Description) VALUES ('" + categoryid + "','" + categoryname + "','" + categorydescription + "');";
+                        dBConnection.ExecuteQueries(SQLQuery);
 
-                    const string message = "Insert Successfull..!";
+                        const string message = "Insert Successfull..!";
+                        const string caption = "Data Insert Information..";
+                        var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // If the no button was pressed ...
+                        if (result == DialogResult.OK)
+                        {
+
+                        }
+                        ClearInputData();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    const string message = "Category ID : [ {0} ] is exist in the database.! Please change the Category ID..!";
                     const string caption = "Data Insert Information..";
-                    var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var result = MessageBox.Show(string.Format(message, categoryid), caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // If the no button was pressed ...
                     if (result == DialogResult.OK)
                     {
 
                     }
-
                     ClearInputData();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
                 }
             }
             else
             {
-                const string message = "Insert Fail..! Please enter the data..";
+                const string message = "Insert Fail..! Please enter the valid data..";
                 const string caption = "Data Insert Information..";
                 var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -62,13 +77,14 @@ namespace TheNeo_POS_System
 
         private void ClearInputData()
         {
-            GetLastCategoryID();
+            dBConnection.CloseDataReader();
+            GetLastCategoryIDAndCal();
             CategoryDataGridViewDisplay();
             txt_CategoryName.Text = "";
             txt_CategoryDescription.Text = "";
         }
 
-        private void GetLastCategoryID()
+        private void GetLastCategoryIDAndCal()
         {
             try
             {
@@ -96,6 +112,28 @@ namespace TheNeo_POS_System
             }
         }
 
+        private string CheckCategoryID(string categoryid)
+        {
+            try
+            {
+                string SQLQuery = "SELECT * FROM [POSSTheNeoMobile].[dbo].[TB.Category] WHERE C_ID = '"+ categoryid+"';";
+                if (dBConnection.DataReader(SQLQuery).Read())
+                {
+                    LastCategoryID = dBConnection.dr["C_ID"].ToString();
+                    dBConnection.CloseDataReader();
+                }
+                else
+                {
+                    LastCategoryID = "C_1";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return LastCategoryID;
+        }
+
         private void CategoryDataGridViewDisplay()
         {
             try
@@ -103,6 +141,7 @@ namespace TheNeo_POS_System
                 string SQLQuery = "SELECT * FROM [POSSTheNeoMobile].[dbo].[TB.Category]";
                 dgv_Category.AutoGenerateColumns = false;
                 dgv_Category.DataSource = dBConnection.ShowDataInGridView(SQLQuery);
+                dBConnection.CloseDataReader();
             }
             catch (Exception ex)
             {
@@ -130,26 +169,43 @@ namespace TheNeo_POS_System
 
             if (!categoryid.Equals("") && !categoryname.Equals("") || !categorydescription.Equals(""))
             {
-                try
+                if (categoryid.Equals(CheckCategoryID(categoryid)))
                 {
-                    string SQLQuery = "UPDATE [POSSTheNeoMobile].[dbo].[TB.Category] SET C_Name = '" + categoryname + "',C_Description = '" + categorydescription + "' WHERE C_ID = '" + categoryid + "';";
-                    dBConnection.ExecuteQueries(SQLQuery);
+                    try
+                    {
+                        string SQLQuery = "UPDATE [POSSTheNeoMobile].[dbo].[TB.Category] SET C_Name = '" + categoryname + "',C_Description = '" + categorydescription + "' WHERE C_ID = '" + categoryid + "';";
+                        dBConnection.ExecuteQueries(SQLQuery);
 
-                    const string message = "Update Successfull..!";
-                    const string caption = "Data Update Information..";
-                    var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        const string message = "Update Successfull..!";
+                        const string caption = "Data Update Information..";
+                        var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // If the no button was pressed ...
+                        if (result == DialogResult.OK)
+                        {
+
+                        }
+
+                        ClearInputData();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    const string message = "Category ID : [ {0} ] is not exist in the database.! Please check the Category ID..!";
+                    const string caption = "Data Insert Information..";
+                    var result = MessageBox.Show(string.Format(message, categoryid), caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // If the no button was pressed ...
                     if (result == DialogResult.OK)
                     {
 
                     }
-
+                    //dBConnection.CloseDataReader();
                     ClearInputData();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
                 }
             }
             else
@@ -174,27 +230,45 @@ namespace TheNeo_POS_System
 
             if (!categoryid.Equals("") && !categoryname.Equals("") || !categorydescription.Equals(""))
             {
-                try
+                if (categoryid.Equals(CheckCategoryID(categoryid)))
                 {
-                    string SQLQuery = "DELETE FROM [POSSTheNeoMobile].[dbo].[TB.Category] WHERE C_ID = '" + categoryid + "';";
-                    dBConnection.ExecuteQueries(SQLQuery);
+                    try
+                    {
+                        string SQLQuery = "DELETE FROM [POSSTheNeoMobile].[dbo].[TB.Category] WHERE C_ID = '" + categoryid + "';";
+                        dBConnection.ExecuteQueries(SQLQuery);
 
-                    const string message = "Delete Successfull..!";
-                    const string caption = "Data Delete Information..";
-                    var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        const string message = "Delete Successfull..!";
+                        const string caption = "Data Delete Information..";
+                        var result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // If the no button was pressed ...
+                        if (result == DialogResult.OK)
+                        {
+
+                        }
+
+                        ClearInputData();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    const string message = "Category ID : [ {0} ] is not exist in the database.! Please check the Category ID..!";
+                    const string caption = "Data Insert Information..";
+                    var result = MessageBox.Show(string.Format(message, categoryid), caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // If the no button was pressed ...
                     if (result == DialogResult.OK)
                     {
 
                     }
-
+                    //dBConnection.CloseDataReader();
                     ClearInputData();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                
             }
             else
             {
