@@ -17,8 +17,8 @@ namespace TheNeo_POS_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new HomePage());
-            Application.Run(new Login_Page());
+            Application.Run(new HomePage("test"));
+            //Application.Run(new Login_Page());
         }
     }
 }

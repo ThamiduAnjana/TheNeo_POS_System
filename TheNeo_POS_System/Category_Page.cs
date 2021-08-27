@@ -10,6 +10,7 @@ namespace TheNeo_POS_System
         {
             InitializeComponent();
             dBConnection.OpenConection();
+            GetLastCategoryID();
         }
 
         private void btn_Insert_Click(object sender, EventArgs e)
@@ -24,7 +25,6 @@ namespace TheNeo_POS_System
                 {
                     string SQLQuery = "INSERT INTO [POSSTheNeoMobile].[dbo].[TB.Category] (C_ID,C_Name,C_Description) VALUES ('"+ categoryid + "','"+ categoryname + "','"+ categorydescription + "');";
                     dBConnection.ExecuteQueries(SQLQuery);
-                    dBConnection.CloseConnection();
                     ClearInputData();
                 }
                 catch (Exception ex)
@@ -51,6 +51,26 @@ namespace TheNeo_POS_System
             txt_CategoryID.Text = "";
             txt_CategoryName.Text = "";
             txt_CategoryDescription.Text = "";
+        }
+
+        private void GetLastCategoryID()
+        {
+            try
+            {
+                string SQLQuery = "SELECT * FROM [POSSTheNeoMobile].[dbo].[TB.Category] ORDER BY C_ID DESC";
+                if (dBConnection.DataReader(SQLQuery).Read())
+                {
+                    txt_CategoryID.Text = dBConnection.dr["C_ID"].ToString();
+                }
+                else
+                {
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

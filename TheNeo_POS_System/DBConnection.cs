@@ -11,8 +11,14 @@ namespace TheNeo_POS_System
 {
     public class DBConnection
     {
+        public SqlConnection con;
+        public SqlCommand cmd;
+        public SqlDataReader dr;
+        public SqlDataAdapter da;
+        public DataSet ds;
+
         string URL = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=POSSTheNeoMobile;User ID=sa;Password=12345";
-        SqlConnection con;
+        
 
         public void OpenConection()
         {
@@ -60,17 +66,17 @@ namespace TheNeo_POS_System
 
         public SqlDataReader DataReader(string Query_)
         {
-            SqlCommand cmd = new SqlCommand(Query_, con);
-            SqlDataReader dr = cmd.ExecuteReader();
+            cmd = new SqlCommand(Query_, con);
+            dr = cmd.ExecuteReader();
             return dr;
         }
 
 
         public object ShowDataInGridView(string Query_)
         {
-            SqlDataAdapter dr = new SqlDataAdapter(Query_, URL);
-            DataSet ds = new DataSet();
-            dr.Fill(ds);
+            da = new SqlDataAdapter(Query_, URL);
+            ds = new DataSet();
+            da.Fill(ds);
             object dataum = ds.Tables[0];
             return dataum;
         }
