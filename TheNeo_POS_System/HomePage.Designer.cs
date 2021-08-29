@@ -31,30 +31,10 @@ namespace TheNeo_POS_System
         {
             this.components = new System.ComponentModel.Container();
             this.Left_Menu_Panel = new System.Windows.Forms.Panel();
-            this.Btn_SidePanel = new System.Windows.Forms.Panel();
-            this.Bottom_Panel = new System.Windows.Forms.Panel();
-            this.Txt_Date = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.Txt_Time = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.Top_Panel = new System.Windows.Forms.Panel();
-            this.Txt_UserName = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.timer_for_Time = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.Btn_Minimize = new System.Windows.Forms.Button();
-            this.Btn_Close = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Btn_Category = new System.Windows.Forms.Button();
             this.Btn_DBBackup = new System.Windows.Forms.Button();
             this.Btn_About = new System.Windows.Forms.Button();
+            this.Btn_SidePanel = new System.Windows.Forms.Panel();
             this.Btn_Service = new System.Windows.Forms.Button();
             this.Btn_Help = new System.Windows.Forms.Button();
             this.Btn_Setting = new System.Windows.Forms.Button();
@@ -65,6 +45,26 @@ namespace TheNeo_POS_System
             this.Btn_NewItem = new System.Windows.Forms.Button();
             this.Btn_Invoice = new System.Windows.Forms.Button();
             this.Btn_Dashboard = new System.Windows.Forms.Button();
+            this.Bottom_Panel = new System.Windows.Forms.Panel();
+            this.Txt_Date = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Txt_Time = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Top_Panel = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Btn_Minimize = new System.Windows.Forms.Button();
+            this.Btn_Close = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Txt_UserName = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.timer_for_Time = new System.Windows.Forms.Timer(this.components);
             this.store_Page1 = new TheNeo_POS_System.Store_Page();
             this.grN_New_Item_Page1 = new TheNeo_POS_System.GRN_New_Item_Page();
             this.service_Page1 = new TheNeo_POS_System.Service_Page();
@@ -77,12 +77,12 @@ namespace TheNeo_POS_System
             this.price_Update_Page1 = new TheNeo_POS_System.Price_Update_Page();
             this.Left_Menu_Panel.SuspendLayout();
             this.Bottom_Panel.SuspendLayout();
-            this.Top_Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.Top_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Left_Menu_Panel
@@ -107,252 +107,6 @@ namespace TheNeo_POS_System
             this.Left_Menu_Panel.Size = new System.Drawing.Size(246, 909);
             this.Left_Menu_Panel.TabIndex = 0;
             this.Left_Menu_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Left_Menu_Panel_MouseDown);
-            // 
-            // Btn_SidePanel
-            // 
-            this.Btn_SidePanel.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Btn_SidePanel.Location = new System.Drawing.Point(0, 42);
-            this.Btn_SidePanel.Name = "Btn_SidePanel";
-            this.Btn_SidePanel.Size = new System.Drawing.Size(10, 52);
-            this.Btn_SidePanel.TabIndex = 3;
-            // 
-            // Bottom_Panel
-            // 
-            this.Bottom_Panel.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Bottom_Panel.Controls.Add(this.Txt_Date);
-            this.Bottom_Panel.Controls.Add(this.textBox8);
-            this.Bottom_Panel.Controls.Add(this.pictureBox4);
-            this.Bottom_Panel.Controls.Add(this.Txt_Time);
-            this.Bottom_Panel.Controls.Add(this.textBox5);
-            this.Bottom_Panel.Controls.Add(this.textBox4);
-            this.Bottom_Panel.Controls.Add(this.textBox3);
-            this.Bottom_Panel.Controls.Add(this.pictureBox2);
-            this.Bottom_Panel.Controls.Add(this.pictureBox3);
-            this.Bottom_Panel.Location = new System.Drawing.Point(0, 956);
-            this.Bottom_Panel.Name = "Bottom_Panel";
-            this.Bottom_Panel.Size = new System.Drawing.Size(1756, 34);
-            this.Bottom_Panel.TabIndex = 1;
-            this.Bottom_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bottom_Panel_MouseDown);
-            // 
-            // Txt_Date
-            // 
-            this.Txt_Date.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Txt_Date.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Date.Font = new System.Drawing.Font("LissenItal", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Date.ForeColor = System.Drawing.SystemColors.Window;
-            this.Txt_Date.Location = new System.Drawing.Point(1181, 11);
-            this.Txt_Date.Name = "Txt_Date";
-            this.Txt_Date.Size = new System.Drawing.Size(212, 15);
-            this.Txt_Date.TabIndex = 8;
-            this.Txt_Date.Text = "00/00/0000";
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox8.Location = new System.Drawing.Point(1129, 11);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(46, 12);
-            this.textBox8.TabIndex = 7;
-            this.textBox8.Text = "Date :";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Txt_Time
-            // 
-            this.Txt_Time.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Txt_Time.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Time.Font = new System.Drawing.Font("LissenItal", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Time.ForeColor = System.Drawing.SystemColors.Window;
-            this.Txt_Time.Location = new System.Drawing.Point(1470, 11);
-            this.Txt_Time.Name = "Txt_Time";
-            this.Txt_Time.Size = new System.Drawing.Size(124, 15);
-            this.Txt_Time.TabIndex = 5;
-            this.Txt_Time.Text = "0:00 AM";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox5.Location = new System.Drawing.Point(1418, 11);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(46, 12);
-            this.textBox5.TabIndex = 4;
-            this.textBox5.Text = "Time :";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Location = new System.Drawing.Point(35, 11);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(234, 12);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.Text = "Development Team : +94 77 180 1521";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(1600, 11);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(143, 12);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "POS System V.2021.01";
-            // 
-            // Top_Panel
-            // 
-            this.Top_Panel.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Top_Panel.Controls.Add(this.pictureBox5);
-            this.Top_Panel.Controls.Add(this.Btn_Minimize);
-            this.Top_Panel.Controls.Add(this.Btn_Close);
-            this.Top_Panel.Controls.Add(this.pictureBox1);
-            this.Top_Panel.Controls.Add(this.Txt_UserName);
-            this.Top_Panel.Controls.Add(this.textBox7);
-            this.Top_Panel.Controls.Add(this.textBox2);
-            this.Top_Panel.Controls.Add(this.textBox1);
-            this.Top_Panel.Location = new System.Drawing.Point(0, -1);
-            this.Top_Panel.Name = "Top_Panel";
-            this.Top_Panel.Size = new System.Drawing.Size(1756, 52);
-            this.Top_Panel.TabIndex = 2;
-            this.Top_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Top_Panel_MouseDown);
-            // 
-            // Txt_UserName
-            // 
-            this.Txt_UserName.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Txt_UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_UserName.Font = new System.Drawing.Font("LissenItal", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_UserName.ForeColor = System.Drawing.SystemColors.Window;
-            this.Txt_UserName.Location = new System.Drawing.Point(1444, 23);
-            this.Txt_UserName.Name = "Txt_UserName";
-            this.Txt_UserName.Size = new System.Drawing.Size(171, 15);
-            this.Txt_UserName.TabIndex = 4;
-            this.Txt_UserName.Text = "Administrator";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("LissenItal", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox7.Location = new System.Drawing.Point(1397, 23);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(51, 15);
-            this.textBox7.TabIndex = 3;
-            this.textBox7.Text = "User :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(227, 26);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(71, 12);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "V.2021.01";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("LissenItal", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(60, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 29);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "POS System";
-            // 
-            // timer_for_Time
-            // 
-            this.timer_for_Time.Tick += new System.EventHandler(this.timer_for_Time_Tick);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::TheNeo_POS_System.Properties.Resources.Shop_40px;
-            this.pictureBox5.Location = new System.Drawing.Point(11, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(38, 44);
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // Btn_Minimize
-            // 
-            this.Btn_Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Btn_Minimize.FlatAppearance.BorderSize = 0;
-            this.Btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Minimize.Image = global::TheNeo_POS_System.Properties.Resources.Minimize_Window_25px;
-            this.Btn_Minimize.Location = new System.Drawing.Point(1665, 10);
-            this.Btn_Minimize.Name = "Btn_Minimize";
-            this.Btn_Minimize.Size = new System.Drawing.Size(34, 34);
-            this.Btn_Minimize.TabIndex = 5;
-            this.Btn_Minimize.UseVisualStyleBackColor = true;
-            this.Btn_Minimize.Click += new System.EventHandler(this.Btn_Minimize_Click);
-            // 
-            // Btn_Close
-            // 
-            this.Btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Btn_Close.FlatAppearance.BorderSize = 0;
-            this.Btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.Btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
-            this.Btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Close.Image = global::TheNeo_POS_System.Properties.Resources.Shutdown_25px;
-            this.Btn_Close.Location = new System.Drawing.Point(1705, 10);
-            this.Btn_Close.Name = "Btn_Close";
-            this.Btn_Close.Size = new System.Drawing.Size(34, 34);
-            this.Btn_Close.TabIndex = 3;
-            this.Btn_Close.UseVisualStyleBackColor = true;
-            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::TheNeo_POS_System.Properties.Resources.Male_User_25px;
-            this.pictureBox1.Location = new System.Drawing.Point(1365, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Image = global::TheNeo_POS_System.Properties.Resources.Calendar_16px;
-            this.pictureBox4.Location = new System.Drawing.Point(1113, 8);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 20);
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::TheNeo_POS_System.Properties.Resources.Online_Support_16px;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 20);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = global::TheNeo_POS_System.Properties.Resources.Clock_16px;
-            this.pictureBox3.Location = new System.Drawing.Point(1402, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 20);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
             // 
             // Btn_Category
             // 
@@ -403,6 +157,14 @@ namespace TheNeo_POS_System
             this.Btn_About.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_About.UseVisualStyleBackColor = true;
             this.Btn_About.Click += new System.EventHandler(this.Btn_About_Click);
+            // 
+            // Btn_SidePanel
+            // 
+            this.Btn_SidePanel.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Btn_SidePanel.Location = new System.Drawing.Point(0, 42);
+            this.Btn_SidePanel.Name = "Btn_SidePanel";
+            this.Btn_SidePanel.Size = new System.Drawing.Size(10, 52);
+            this.Btn_SidePanel.TabIndex = 3;
             // 
             // Btn_Service
             // 
@@ -572,6 +334,244 @@ namespace TheNeo_POS_System
             this.Btn_Dashboard.UseVisualStyleBackColor = true;
             this.Btn_Dashboard.Click += new System.EventHandler(this.Btn_Dashboard_Click);
             // 
+            // Bottom_Panel
+            // 
+            this.Bottom_Panel.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Bottom_Panel.Controls.Add(this.Txt_Date);
+            this.Bottom_Panel.Controls.Add(this.textBox8);
+            this.Bottom_Panel.Controls.Add(this.pictureBox4);
+            this.Bottom_Panel.Controls.Add(this.Txt_Time);
+            this.Bottom_Panel.Controls.Add(this.textBox5);
+            this.Bottom_Panel.Controls.Add(this.textBox4);
+            this.Bottom_Panel.Controls.Add(this.textBox3);
+            this.Bottom_Panel.Controls.Add(this.pictureBox2);
+            this.Bottom_Panel.Controls.Add(this.pictureBox3);
+            this.Bottom_Panel.Location = new System.Drawing.Point(0, 956);
+            this.Bottom_Panel.Name = "Bottom_Panel";
+            this.Bottom_Panel.Size = new System.Drawing.Size(1756, 34);
+            this.Bottom_Panel.TabIndex = 1;
+            this.Bottom_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bottom_Panel_MouseDown);
+            // 
+            // Txt_Date
+            // 
+            this.Txt_Date.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Txt_Date.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Date.Font = new System.Drawing.Font("LissenItal", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Date.ForeColor = System.Drawing.SystemColors.Window;
+            this.Txt_Date.Location = new System.Drawing.Point(1181, 11);
+            this.Txt_Date.Name = "Txt_Date";
+            this.Txt_Date.Size = new System.Drawing.Size(212, 15);
+            this.Txt_Date.TabIndex = 8;
+            this.Txt_Date.Text = "00/00/0000";
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox8.Location = new System.Drawing.Point(1129, 11);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(46, 12);
+            this.textBox8.TabIndex = 7;
+            this.textBox8.Text = "Date :";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Image = global::TheNeo_POS_System.Properties.Resources.Calendar_16px;
+            this.pictureBox4.Location = new System.Drawing.Point(1113, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 20);
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // Txt_Time
+            // 
+            this.Txt_Time.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Txt_Time.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Time.Font = new System.Drawing.Font("LissenItal", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Time.ForeColor = System.Drawing.SystemColors.Window;
+            this.Txt_Time.Location = new System.Drawing.Point(1470, 11);
+            this.Txt_Time.Name = "Txt_Time";
+            this.Txt_Time.Size = new System.Drawing.Size(124, 15);
+            this.Txt_Time.TabIndex = 5;
+            this.Txt_Time.Text = "0:00 AM";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox5.Location = new System.Drawing.Point(1418, 11);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(46, 12);
+            this.textBox5.TabIndex = 4;
+            this.textBox5.Text = "Time :";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox4.Location = new System.Drawing.Point(35, 11);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(234, 12);
+            this.textBox4.TabIndex = 3;
+            this.textBox4.Text = "Development Team : +94 77 180 1521";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox3.Location = new System.Drawing.Point(1600, 11);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(143, 12);
+            this.textBox3.TabIndex = 2;
+            this.textBox3.Text = "POS System V.2021.01";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::TheNeo_POS_System.Properties.Resources.Online_Support_16px;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 20);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Image = global::TheNeo_POS_System.Properties.Resources.Clock_16px;
+            this.pictureBox3.Location = new System.Drawing.Point(1402, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 20);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // Top_Panel
+            // 
+            this.Top_Panel.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Top_Panel.Controls.Add(this.pictureBox5);
+            this.Top_Panel.Controls.Add(this.Btn_Minimize);
+            this.Top_Panel.Controls.Add(this.Btn_Close);
+            this.Top_Panel.Controls.Add(this.pictureBox1);
+            this.Top_Panel.Controls.Add(this.Txt_UserName);
+            this.Top_Panel.Controls.Add(this.textBox7);
+            this.Top_Panel.Controls.Add(this.textBox2);
+            this.Top_Panel.Controls.Add(this.textBox1);
+            this.Top_Panel.Location = new System.Drawing.Point(0, -1);
+            this.Top_Panel.Name = "Top_Panel";
+            this.Top_Panel.Size = new System.Drawing.Size(1756, 52);
+            this.Top_Panel.TabIndex = 2;
+            this.Top_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Top_Panel_MouseDown);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::TheNeo_POS_System.Properties.Resources.Shop_40px;
+            this.pictureBox5.Location = new System.Drawing.Point(11, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(38, 44);
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // Btn_Minimize
+            // 
+            this.Btn_Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Btn_Minimize.FlatAppearance.BorderSize = 0;
+            this.Btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Minimize.Image = global::TheNeo_POS_System.Properties.Resources.Minimize_Window_25px;
+            this.Btn_Minimize.Location = new System.Drawing.Point(1665, 10);
+            this.Btn_Minimize.Name = "Btn_Minimize";
+            this.Btn_Minimize.Size = new System.Drawing.Size(34, 34);
+            this.Btn_Minimize.TabIndex = 5;
+            this.Btn_Minimize.UseVisualStyleBackColor = true;
+            this.Btn_Minimize.Click += new System.EventHandler(this.Btn_Minimize_Click);
+            // 
+            // Btn_Close
+            // 
+            this.Btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Btn_Close.FlatAppearance.BorderSize = 0;
+            this.Btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.Btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.Btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Close.Image = global::TheNeo_POS_System.Properties.Resources.Shutdown_25px;
+            this.Btn_Close.Location = new System.Drawing.Point(1705, 10);
+            this.Btn_Close.Name = "Btn_Close";
+            this.Btn_Close.Size = new System.Drawing.Size(34, 34);
+            this.Btn_Close.TabIndex = 3;
+            this.Btn_Close.UseVisualStyleBackColor = true;
+            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::TheNeo_POS_System.Properties.Resources.Male_User_25px;
+            this.pictureBox1.Location = new System.Drawing.Point(1365, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Txt_UserName
+            // 
+            this.Txt_UserName.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Txt_UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_UserName.Font = new System.Drawing.Font("LissenItal", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_UserName.ForeColor = System.Drawing.SystemColors.Window;
+            this.Txt_UserName.Location = new System.Drawing.Point(1444, 23);
+            this.Txt_UserName.Name = "Txt_UserName";
+            this.Txt_UserName.Size = new System.Drawing.Size(171, 15);
+            this.Txt_UserName.TabIndex = 4;
+            this.Txt_UserName.Text = "Administrator";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("LissenItal", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox7.Location = new System.Drawing.Point(1397, 23);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(51, 15);
+            this.textBox7.TabIndex = 3;
+            this.textBox7.Text = "User :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox2.Location = new System.Drawing.Point(227, 26);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(71, 12);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "V.2021.01";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("LissenItal", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(60, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(170, 29);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "POS System";
+            // 
+            // timer_for_Time
+            // 
+            this.timer_for_Time.Tick += new System.EventHandler(this.timer_for_Time_Tick);
+            // 
             // store_Page1
             // 
             this.store_Page1.Location = new System.Drawing.Point(247, 52);
@@ -675,13 +675,13 @@ namespace TheNeo_POS_System
             this.Left_Menu_Panel.ResumeLayout(false);
             this.Bottom_Panel.ResumeLayout(false);
             this.Bottom_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.Top_Panel.ResumeLayout(false);
             this.Top_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
