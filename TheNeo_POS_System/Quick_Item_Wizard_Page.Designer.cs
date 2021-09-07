@@ -32,20 +32,20 @@ namespace TheNeo_POS_System
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btn_SaveNewItem = new System.Windows.Forms.Button();
+            this.txt_SellingPrice = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_MarkedPrice = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_ItemBarcode = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_category = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_ItemSName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_ItemEName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_ItemCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
@@ -72,51 +72,51 @@ namespace TheNeo_POS_System
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.btn_SaveNewItem);
+            this.panel2.Controls.Add(this.txt_SellingPrice);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txt_MarkedPrice);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txt_ItemBarcode);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txt_category);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txt_ItemSName);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txt_ItemEName);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txt_ItemCode);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(197, 200);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1080, 477);
             this.panel2.TabIndex = 6;
             // 
-            // button1
+            // btn_SaveNewItem
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(254)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(121)))), ((int)(((byte)(255)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(467, 342);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 58);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Save New Item";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_SaveNewItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(254)))));
+            this.btn_SaveNewItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.btn_SaveNewItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
+            this.btn_SaveNewItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(121)))), ((int)(((byte)(255)))));
+            this.btn_SaveNewItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SaveNewItem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btn_SaveNewItem.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_SaveNewItem.Location = new System.Drawing.Point(467, 342);
+            this.btn_SaveNewItem.Name = "btn_SaveNewItem";
+            this.btn_SaveNewItem.Size = new System.Drawing.Size(183, 58);
+            this.btn_SaveNewItem.TabIndex = 23;
+            this.btn_SaveNewItem.Text = "Save New Item";
+            this.btn_SaveNewItem.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // txt_SellingPrice
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox6.Location = new System.Drawing.Point(631, 249);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(355, 27);
-            this.textBox6.TabIndex = 22;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SellingPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_SellingPrice.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_SellingPrice.Location = new System.Drawing.Point(631, 249);
+            this.txt_SellingPrice.Name = "txt_SellingPrice";
+            this.txt_SellingPrice.Size = new System.Drawing.Size(355, 27);
+            this.txt_SellingPrice.TabIndex = 22;
+            this.txt_SellingPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label8
             // 
@@ -128,14 +128,14 @@ namespace TheNeo_POS_System
             this.label8.TabIndex = 21;
             this.label8.Text = "Selling Price (Rs.)";
             // 
-            // textBox5
+            // txt_MarkedPrice
             // 
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox5.Location = new System.Drawing.Point(630, 179);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(355, 27);
-            this.textBox5.TabIndex = 20;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_MarkedPrice.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_MarkedPrice.Location = new System.Drawing.Point(630, 179);
+            this.txt_MarkedPrice.Name = "txt_MarkedPrice";
+            this.txt_MarkedPrice.Size = new System.Drawing.Size(355, 27);
+            this.txt_MarkedPrice.TabIndex = 20;
+            this.txt_MarkedPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -147,13 +147,13 @@ namespace TheNeo_POS_System
             this.label7.TabIndex = 19;
             this.label7.Text = "Marked Price (Rs.)";
             // 
-            // textBox4
+            // txt_ItemBarcode
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox4.Location = new System.Drawing.Point(339, 102);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(239, 27);
-            this.textBox4.TabIndex = 18;
+            this.txt_ItemBarcode.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_ItemBarcode.Location = new System.Drawing.Point(339, 102);
+            this.txt_ItemBarcode.Name = "txt_ItemBarcode";
+            this.txt_ItemBarcode.Size = new System.Drawing.Size(239, 27);
+            this.txt_ItemBarcode.TabIndex = 18;
             // 
             // label6
             // 
@@ -175,13 +175,13 @@ namespace TheNeo_POS_System
             this.txt_category.TabIndex = 16;
             this.txt_category.Text = "Select Category Name";
             // 
-            // textBox3
+            // txt_ItemSName
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox3.Location = new System.Drawing.Point(75, 249);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(503, 27);
-            this.textBox3.TabIndex = 15;
+            this.txt_ItemSName.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_ItemSName.Location = new System.Drawing.Point(75, 249);
+            this.txt_ItemSName.Name = "txt_ItemSName";
+            this.txt_ItemSName.Size = new System.Drawing.Size(503, 27);
+            this.txt_ItemSName.TabIndex = 15;
             // 
             // label4
             // 
@@ -203,13 +203,13 @@ namespace TheNeo_POS_System
             this.label5.TabIndex = 12;
             this.label5.Text = "Item Category";
             // 
-            // textBox2
+            // txt_ItemEName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox2.Location = new System.Drawing.Point(74, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(504, 27);
-            this.textBox2.TabIndex = 11;
+            this.txt_ItemEName.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_ItemEName.Location = new System.Drawing.Point(74, 179);
+            this.txt_ItemEName.Name = "txt_ItemEName";
+            this.txt_ItemEName.Size = new System.Drawing.Size(504, 27);
+            this.txt_ItemEName.TabIndex = 11;
             // 
             // label3
             // 
@@ -221,13 +221,13 @@ namespace TheNeo_POS_System
             this.label3.TabIndex = 10;
             this.label3.Text = "Item Name (English)";
             // 
-            // textBox1
+            // txt_ItemCode
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox1.Location = new System.Drawing.Point(75, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 27);
-            this.textBox1.TabIndex = 9;
+            this.txt_ItemCode.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_ItemCode.Location = new System.Drawing.Point(75, 102);
+            this.txt_ItemCode.Name = "txt_ItemCode";
+            this.txt_ItemCode.Size = new System.Drawing.Size(236, 27);
+            this.txt_ItemCode.TabIndex = 9;
             // 
             // label2
             // 
@@ -272,19 +272,19 @@ namespace TheNeo_POS_System
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_ItemSName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_ItemEName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_ItemCode;
         private System.Windows.Forms.ComboBox txt_category;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_SellingPrice;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_MarkedPrice;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_ItemBarcode;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_SaveNewItem;
     }
 }
