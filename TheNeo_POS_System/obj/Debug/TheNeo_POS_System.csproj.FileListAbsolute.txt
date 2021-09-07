@@ -23,7 +23,6 @@ E:\C# Project\TheNeo_POS_System\TheNeo_POS_System\obj\Debug\TheNeo_POS_System.Lo
 E:\C# Project\GitHub\TheNeo_POS_System\TheNeo_POS_System\bin\Debug\TheNeo_POS_System.exe.config
 E:\C# Project\GitHub\TheNeo_POS_System\TheNeo_POS_System\bin\Debug\TheNeo_POS_System.exe
 E:\C# Project\GitHub\TheNeo_POS_System\TheNeo_POS_System\bin\Debug\TheNeo_POS_System.pdb
-E:\C# Project\GitHub\TheNeo_POS_System\TheNeo_POS_System\obj\Debug\TheNeo_POS_System.csprojAssemblyReference.cache
 E:\C# Project\GitHub\TheNeo_POS_System\TheNeo_POS_System\obj\Debug\TheNeo_POS_System.About_Page.resources
 E:\C# Project\GitHub\TheNeo_POS_System\TheNeo_POS_System\obj\Debug\TheNeo_POS_System.Category_Page.resources
 E:\C# Project\GitHub\TheNeo_POS_System\TheNeo_POS_System\obj\Debug\TheNeo_POS_System.DashBoard_Page.resources

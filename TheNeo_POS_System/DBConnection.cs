@@ -59,7 +59,7 @@ namespace TheNeo_POS_System
 
         public void ExecuteQueries(string Query_)
         {
-            SqlCommand cmd = new SqlCommand(Query_, con);
+            cmd = new SqlCommand(Query_, con);
             cmd.ExecuteNonQuery();
         }
 
