@@ -358,9 +358,9 @@ namespace TheNeo_POS_System
             this.Txt_Date.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Date.Font = new System.Drawing.Font("LissenItal", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Date.ForeColor = System.Drawing.SystemColors.Window;
-            this.Txt_Date.Location = new System.Drawing.Point(1181, 11);
+            this.Txt_Date.Location = new System.Drawing.Point(1125, 11);
             this.Txt_Date.Name = "Txt_Date";
-            this.Txt_Date.Size = new System.Drawing.Size(212, 15);
+            this.Txt_Date.Size = new System.Drawing.Size(271, 15);
             this.Txt_Date.TabIndex = 8;
             this.Txt_Date.Text = "00/00/0000";
             // 
@@ -370,7 +370,7 @@ namespace TheNeo_POS_System
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("LissenItal", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox8.Location = new System.Drawing.Point(1129, 11);
+            this.textBox8.Location = new System.Drawing.Point(1073, 11);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(46, 12);
             this.textBox8.TabIndex = 7;
@@ -381,7 +381,7 @@ namespace TheNeo_POS_System
             // 
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Image = global::TheNeo_POS_System.Properties.Resources.Calendar_16px;
-            this.pictureBox4.Location = new System.Drawing.Point(1113, 8);
+            this.pictureBox4.Location = new System.Drawing.Point(1057, 8);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(25, 20);
             this.pictureBox4.TabIndex = 9;
