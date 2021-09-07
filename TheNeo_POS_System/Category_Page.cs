@@ -25,7 +25,7 @@ namespace TheNeo_POS_System
             {
                 if (!categoryid.Equals(CheckCategoryID(categoryid)))
                 {
-                    dBConnection.CloseDataReader();
+                    //dBConnection.CloseDataReader();
                     try
                     {
                         string SQLQuery = "INSERT INTO [POSSTheNeoMobile].[dbo].[TB.Category] (C_ID,C_Name,C_Description) VALUES ('" + categoryid + "','" + categoryname + "','" + categorydescription + "');";
@@ -204,7 +204,6 @@ namespace TheNeo_POS_System
                     {
 
                     }
-                    //dBConnection.CloseDataReader();
                     ClearInputData();
                 }
             }
@@ -265,7 +264,6 @@ namespace TheNeo_POS_System
                     {
 
                     }
-                    //dBConnection.CloseDataReader();
                     ClearInputData();
                 }
                 

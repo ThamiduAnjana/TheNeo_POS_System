@@ -39,7 +39,7 @@ namespace TheNeo_POS_System
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_category = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@ namespace TheNeo_POS_System
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.txt_category);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
@@ -165,14 +165,15 @@ namespace TheNeo_POS_System
             this.label6.TabIndex = 17;
             this.label6.Text = "Item Barcode";
             // 
-            // comboBox1
+            // txt_category
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(631, 100);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(354, 29);
-            this.comboBox1.TabIndex = 16;
+            this.txt_category.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_category.FormattingEnabled = true;
+            this.txt_category.Location = new System.Drawing.Point(631, 100);
+            this.txt_category.Name = "txt_category";
+            this.txt_category.Size = new System.Drawing.Size(354, 29);
+            this.txt_category.TabIndex = 16;
+            this.txt_category.Text = "Select Category Name";
             // 
             // textBox3
             // 
@@ -277,7 +278,7 @@ namespace TheNeo_POS_System
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox txt_category;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox5;
